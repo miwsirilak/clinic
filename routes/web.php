@@ -71,3 +71,26 @@ Route::get('/sliding', function () {
     return view('page_user/sliding');
 })->name('sliding');
 
+// CRUD
+// Auth::routes();
+Route::resource('contact', 'ContactController');
+
+
+// Route::get('/crud', function () {
+//     return view('crud/create');
+// })->name('create');
+
+Route::resource('nameuser', 'NameUserController');
+
+// admin
+Route::get('/home', function () {
+    return view('page_admin/home');
+})->name('home');
+
+Route::get('/addcards', function () {
+    return view('page_admin/addcards');
+})->name('addcards');
+
+Route::get('/addc', function () {
+    return view('page_admin/addc');
+})->name('addc');
